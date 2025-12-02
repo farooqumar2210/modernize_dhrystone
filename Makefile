@@ -8,10 +8,10 @@ TARGET = dhrystone
 all: $(TARGET)
  
 $(TARGET): $(OBJ)
-        $(CC) $(CFLAGS) $(OBJ) -o $(TARGET)
+	$(CC) $(CFLAGS) $(OBJ) -o $(TARGET)
 
 %.o: %.c dhry.h
-        $(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@
 
- clean:
-        rm -f $(OBJ) $(TARGET)
+clean:
+	rm -f $(OBJ) $(TARGET)
